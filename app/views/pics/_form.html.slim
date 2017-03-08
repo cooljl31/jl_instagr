@@ -2,7 +2,8 @@
   - if @pic.errors.any?
     #error
       h2
-        = pluralize(@pic.errors.count, 'error')> prevented this Pic from saving
+        = pluralize(@pic.errors.count, 'error')
+        | prevented this Pic from saving
         ul
           - @pic.errors.full_messages.each do |msg|
             = msg
