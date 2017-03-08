@@ -1,6 +1,10 @@
 h1= @pic.title
 h1= @pic.description
 
+p
+  | Created by
+  =< @pic.user.email
+
 => link_to 'Back', root_path
 => link_to 'Edit', edit_pic_path
 = link_to 'Trash', pic_path, method: :delete, data: { confirm: 'You really want to Trash me!' }
