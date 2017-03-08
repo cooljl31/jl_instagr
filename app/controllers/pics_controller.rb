@@ -1,5 +1,6 @@
 class PicsController < ApplicationController
-  before_action :find_pic_id, only: [:show, :update, :edit, :destroy]
+  before_action :find_pic_id, only: [:show, :update, :edit, :destroy, :upvote]
+  before_action :authenticate_user!, except: [:index, :show]
   def index
     @pics = Pic.all.order('created_at DESC')
   end
@@ -23,6 +24,12 @@ class PicsController < ApplicationController
 
   def edit
   end
+
+  def upvote
+    @pic.upvote_by current_user
+    redirect_to :back
+  end
+
 
   def update
     if @pic.update(pic_params)
