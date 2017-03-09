@@ -5,4 +5,3 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :pics
 end
-
