@@ -54,5 +54,9 @@ gem 'slim'
 gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'devise'
+gem 'devise-bootstrap-views'
+gem 'paperclip'
+gem 'masonry-rails'
+gem 'acts_as_votable'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
